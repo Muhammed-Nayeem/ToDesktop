@@ -17,6 +17,7 @@
     <style type="text/tailwindcss">
       @theme {
         --font-primary: "Inter", sans-serif;
+        --color-primary: #3238F2;
         --color-navLinkHover: #3238F2;
         --color-headerBG: #FAFAFC;
         --color-headline: #000000;
@@ -27,9 +28,9 @@
     <!-- header start -->
     <header id="header" class="fixed top-0 left-0 right-0 w-full z-50 bg-headerBG">
       <div class="container max-w-screen-xl mx-auto">
-        <nav id="navbar" class="px-3 py-4 flex justify-between items-center">
+        <nav id="navbar" class="px-3 py-3 flex justify-between items-center">
           <!-- brand -->
-          <a href="#" class="flex items-center gap-2">
+          <a href="#" class="flex items-center gap-2 flex-1">
             <img class="max-w-12 max-h-12 object-cover" src="./Assets/Images/asset 0.png" alt="brand">
             <span class="text-lg font-semibold">ToDesktop</span>
           </a>
@@ -42,18 +43,20 @@
             <li><a class="text-lg font-medium hover:text-navLinkHover" href="#">Login</a></li>
           </ul>
           <!-- developers button -->
-          <button class="px-4 py-1.5 border border-gray-300 cursor-pointer hover:border-gray-500 transition rounded-lg text-base hidden lg:flex items-center gap-2">
-            <img src="./Assets/Images/asset 1.svg" alt="dev-icon">
-            <span class="font-semibold text-headline">Electron Developer</span>
-            <i class="fa-solid fa-arrow-right text-gray-400"></i>
-          </button>
+          <div class="hidden lg:flex flex-1 justify-end">
+            <button class="px-4 py-1.5 border border-gray-300 cursor-pointer hover:border-gray-500 transition rounded-lg text-base flex items-center gap-2">
+              <img src="./Assets/Images/asset 1.svg" alt="dev-icon">
+              <span class="font-semibold text-headline">Electron Developer</span>
+              <i class="fa-solid fa-arrow-right text-gray-400"></i>
+            </button>
+          </div>
           <!-- menu icon button -->
           <button class="text-lg font-medium cursor-pointer lg:hidden" onclick="handleMobileMenu()">
             <i class="fa-solid fa-bars text-gray-600"></i>
           </button>
 
           <!-- mobile responsive navbar -->
-          <div id="navbar-dialog" class="px-3 py-4 fixed inset-0 bg-white z-10 hidden lg:hidden">
+          <div id="navbar-dialog" class="px-3 py-3 fixed inset-0 bg-white z-10 hidden lg:hidden">
             <div id="mobile-navbar" class="flex justify-between items-center">
               <!-- brand -->
               <a href="#" class="flex items-center gap-2">
