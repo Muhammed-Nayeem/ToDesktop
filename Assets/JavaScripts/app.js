@@ -36,7 +36,9 @@ function setupIntersectionObserver(element, isLTR, speed) {
 const group_1 = document.getElementById("group-1");
 const group_2 = document.getElementById("group-2");
 const group_3 = document.getElementById("group-3");
+const group_4 = document.getElementById("group-4");
 
 setupIntersectionObserver(group_1, true, 0.15);
 setupIntersectionObserver(group_2, false, 0.15);
 setupIntersectionObserver(group_3, true, 0.15);
+setupIntersectionObserver(group_4, true, 0.8);
