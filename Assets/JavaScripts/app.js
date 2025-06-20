@@ -41,4 +41,16 @@ const group_4 = document.getElementById("group-4");
 setupIntersectionObserver(group_1, true, 0.15);
 setupIntersectionObserver(group_2, false, 0.15);
 setupIntersectionObserver(group_3, true, 0.15);
-setupIntersectionObserver(group_4, true, 0.8);
+setupIntersectionObserver(group_4, false, 0.10);
+
+const dtElements = document.querySelectorAll("dt");
+dtElements.forEach((element) => {
+  element.addEventListener("click", () => {
+    const ddID = element.getAttribute("aria-controls");
+    const ddElement = document.getElementById(ddID);
+    const arrowIcon = element.querySelectorAll("i")[0];
+
+    ddElement.classList.toggle("hidden");
+    arrowIcon.classList.toggle("-rotate-180");
+  });
+});
