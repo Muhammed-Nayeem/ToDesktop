@@ -62,3 +62,16 @@ const getYear = () => {
   currentYear.innerText = crntYear;
 };
 getYear();
+
+//scroll reveal:
+const animation = ScrollReveal({
+  distance: "30px",
+  duration: 1500,
+  delay: 400,
+  reset: true,
+});
+
+animation.reveal(".hero-content", {
+  delay: 200,
+  origin: "top",
+});
