@@ -54,3 +54,11 @@ dtElements.forEach((element) => {
     arrowIcon.classList.toggle("-rotate-180");
   });
 });
+
+const currentYear = document.getElementById("year");
+const getYear = () => {
+  const date = new Date();
+  const crntYear = date.getFullYear();
+  currentYear.innerText = crntYear;
+};
+getYear();
